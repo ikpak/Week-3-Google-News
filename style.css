@@ -1,0 +1,57 @@
+body {
+    background-color: #1D1C40;
+    font-family: 'EB Garamond', serif;
+    color: white;
+}
+
+header {
+    text-align: center;
+    padding-top: 30px;
+}
+
+h1 {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #797FF2;
+    color: #13F28A;
+}
+
+.nav {
+    justify-content: space-evenly;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #797FF2;
+    margin-bottom: 20px;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    color: #13F28A;
+}
+
+#news {
+    display: flex;
+    align-items: center;
+    border: 1px solid gray;
+    background-color: gray;
+    color: black;
+    border-radius: 10px;;
+    padding: 15px 15px;
+    margin-top: 20px;
+}
+
+#title {
+    font-size: 1.6em;
+    font-weight: 600;
+    padding-bottom: 5px;
+}
+
+#source > a {
+    color: black;
+    text-decoration: underline;
+}
+
+#source > a:hover {
+    color: white;
+}
