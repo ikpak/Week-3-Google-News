@@ -19,6 +19,13 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
 
+    <!-- Font Awesome-->
+    <link
+rel="stylesheet"
+crossorigin="anonymous"
+href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+/>
 </head>
 
 <body>
@@ -29,34 +36,35 @@
     </header>
 
     <div class="container">
-        <ul class="nav">
+        <ul class="nav nav-top">
             <li class="nav-item">
-                <a class="nav-link" href="#">Top</a>
+                <a class="nav-link nav-link-top" onclick="showTop()">Top</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Business</a>
+                <a class="nav-link nav-link-top" onclick="showDJ()">DJ</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Entertainment</a>
+                <a class="nav-link nav-link-top" href="#">Entertainment</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Health</a>
+                <a class="nav-link nav-link-top" href="#">Health</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Science</a>
+                <a class="nav-link nav-link-top" href="#">Science</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Sports</a>
+                <a class="nav-link nav-link-top" href="#">Sports</a>
             </li>
         </ul>
     </div>
-        
-    </nav>
 
     <section>
         <div class="container">
             <div id="newsArea">
             </div>
+        </div>
+        <div class="container button-container">
+            <button id="showMore" onclick="showMore()">Show More</button>
         </div>
     </section>
 

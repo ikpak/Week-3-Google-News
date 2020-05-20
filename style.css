@@ -1,7 +1,7 @@
 body {
-    background-color: #1D1C40;
+    background-color: #232325;
     font-family: 'EB Garamond', serif;
-    color: white;
+    color: #EEEEEE;
 }
 
 header {
@@ -11,31 +11,35 @@ header {
 
 h1 {
     padding-bottom: 15px;
-    border-bottom: 1px solid #797FF2;
-    color: #13F28A;
+    border-bottom: 1px solid #591674;
+    color: #AADD01;
 }
 
-.nav {
+.nav-top {
     justify-content: space-evenly;
     padding-bottom: 5px;
-    border-bottom: 1px solid #797FF2;
+    border-bottom: 1px solid #591674;
     margin-bottom: 20px;
 }
 
-.nav-link {
+.nav-link-top {
     color: white;
 }
 
-.nav-link:hover {
-    color: #13F28A;
+.nav-link-top:hover {
+    color: #AADD01;
+}
+
+li:hover {
+    color: #AADD01;
+    cursor: pointer;
 }
 
 #news {
     display: flex;
     align-items: center;
-    border: 1px solid gray;
-    background-color: gray;
-    color: black;
+    border: 1px solid #343539;
+    background-color: #343539;
     border-radius: 10px;;
     padding: 15px 15px;
     margin-top: 20px;
@@ -44,14 +48,50 @@ h1 {
 #title {
     font-size: 1.6em;
     font-weight: 600;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    color: #AADD01;
+}
+
+#description {
+    font-size: 1em;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+#source {
+    font-size: 0.9em;
+    padding-bottom: 10px;
 }
 
 #source > a {
-    color: black;
-    text-decoration: underline;
+    color: white;
 }
 
 #source > a:hover {
-    color: white;
+    color: #AADD01;
+    text-decoration: none;
+}
+
+#publishedAt {
+    font-size: 0.9em;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    background-color:  #591674;
+    border-color: #591674;
+    border-style: solid;
+    color: #EEEEEE;
+}
+
+button:hover {
+    opacity: 80%;
 }

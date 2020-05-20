@@ -2,8 +2,10 @@ let newsList = []
 
 const apiKey = "6c380f89bed94699b3f75b8d9e88f14e"
 
+let pageSize = 20
+
 const loadNews = async() => {
-    let url = `http://newsapi.org/v2/everything?q=bitcoin&apiKey=${apiKey}`
+    let url = `http://newsapi.org/v2/everything?q=music&language=en&pagesize=${pageSize}&apiKey=${apiKey}`
     let data = await fetch(url)
     let result = await data.json();
     newsList = result.articles
@@ -29,3 +31,28 @@ const render = (list) => {
 }
 
 loadNews()
+
+const showTop = async() => {
+    let url = `http://newsapi.org/v2/everything?q=music&language=en&pagesize=${pageSize}&apiKey=${apiKey}`
+    let data = await fetch(url)
+    let result = await data.json();
+    newsList = result.articles
+    render(newsList)
+}
+
+const showDJ = async() => {
+    let url = `http://newsapi.org/v2/everything?q=dj&language=en&pagesize=${pageSize}&apiKey=${apiKey}`
+    let data = await fetch(url)
+    let result = await data.json();
+    newsList = result.articles
+    render(newsList)
+}
+
+const showMore = async() => {
+    pageSize = pageSize + 20
+    let url = `http://newsapi.org/v2/everything?q=music&language=en&pagesize=${pageSize}&apiKey=${apiKey}`
+    let data = await fetch(url)
+    let result = await data.json();
+    newsList = result.articles
+    render(newsList)
+}
