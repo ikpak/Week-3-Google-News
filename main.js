@@ -5,9 +5,8 @@ const apiKey = "6c380f89bed94699b3f75b8d9e88f14e"
 let category = "music"
 let pageSize = 20
 
-let url = `https://newsapi.org/v2/everything?q=${category}&language=en&pagesize=${pageSize}&apiKey=${apiKey}`
-
 const loadNews = async() => {
+    let url = `https://newsapi.org/v2/everything?q=${category}&language=en&pagesize=${pageSize}&apiKey=${apiKey}`
     let data = await fetch(url)
     let result = await data.json();
     newsList = result.articles
@@ -36,18 +35,15 @@ loadNews()
 
 const showTop = async() => {
     category = "music"
-    url = `https://newsapi.org/v2/everything?q=${category}&language=en&pagesize=${pageSize}&apiKey=${apiKey}`
     loadNews()
 }
 
 const showDJ = async() => {
     category = "dj"
-    url = `https://newsapi.org/v2/everything?q=${category}&language=en&pagesize=${pageSize}&apiKey=${apiKey}`
     loadNews()
 }
 
 const showMore = async() => {
     pageSize = pageSize + 20
-    url = `https://newsapi.org/v2/everything?q=${category}&language=en&pagesize=${pageSize}&apiKey=${apiKey}`
     loadNews()
 }
