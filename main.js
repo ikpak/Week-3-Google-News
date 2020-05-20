@@ -20,15 +20,16 @@ const render = (list) => {
                 <div id="title">${item.title}</div>
                 <div id="description">${item.description}</div>
                 <div id="source"><a href="${item.url}">${item.source.name}</a></div>
-                <div id="publishedAt">${item.publishedAt}</div>
+                <div id="publishedAt">${moment(item.publishedAt).fromNow()}</div>
             </div>
             <div id="imgArea">
-                <img src="${item.urlToImage}" height="200" />
+                <img src="${item.urlToImage}" height="200" width="300" />
             </div>
         </div>
     `).join('')
 
     document.getElementById("newsArea").innerHTML = newsHtml
+    document.getElementById("numberArticle").innerHTML = `No. of articles shown: 1-${newsList.length}`
 }
 
 loadNews()
@@ -38,8 +39,28 @@ const showTop = async() => {
     loadNews()
 }
 
-const showDJ = async() => {
+const showArtists = async() => {
     category = "dj"
+    loadNews()
+}
+
+const showEvents = async() => {
+    category = "music+events"
+    loadNews()
+}
+
+const showClubs = async() => {
+    category = "nightclub"
+    loadNews()
+}
+
+const showFashion = async() => {
+    category = "fashion"
+    loadNews()
+}
+
+const showLifestyle = async() => {
+    category = "lifestyle"
     loadNews()
 }
 

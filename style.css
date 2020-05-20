@@ -1,32 +1,33 @@
 body {
     background-color: #232325;
-    font-family: 'EB Garamond', serif;
+    font-family: 'Play', sans-serif;
     color: #EEEEEE;
 }
 
 header {
     text-align: center;
-    padding-top: 30px;
+    padding-top: 80px;
 }
 
 h1 {
-    padding-bottom: 15px;
+    padding-bottom: 20px;
     border-bottom: 1px solid #591674;
     color: #AADD01;
 }
 
-.nav-top {
-    justify-content: space-evenly;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #591674;
-    margin-bottom: 20px;
+.nav {
+    position: fixed;
+    width: 100%;
+    background-color: #591674;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-.nav-link-top {
+.nav-link {
     color: white;
 }
 
-.nav-link-top:hover {
+.nav-link:hover {
     color: #AADD01;
 }
 
@@ -35,13 +36,21 @@ li:hover {
     cursor: pointer;
 }
 
+.nav-item {
+    padding-left: 20px;
+}
+
+.logo {
+    color: #AADD01 !important;
+}
+
 #news {
     display: flex;
     align-items: center;
     border: 1px solid #343539;
     background-color: #343539;
     border-radius: 10px;;
-    padding: 15px 15px;
+    padding: 15px 20px;
     margin-top: 20px;
 }
 
@@ -49,14 +58,14 @@ li:hover {
     font-size: 1.6em;
     font-weight: 600;
     padding-bottom: 10px;
-    padding-right: 10px;
+    padding-right: 20px;
     color: #AADD01;
 }
 
 #description {
     font-size: 1em;
     padding-bottom: 10px;
-    padding-right: 10px;
+    padding-right: 20px;
 }
 
 #source {
@@ -75,6 +84,7 @@ li:hover {
 
 #publishedAt {
     font-size: 0.9em;
+    padding-bottom: 5px;
 }
 
 .button-container {
@@ -88,10 +98,28 @@ button {
     padding: 10px 20px;
     background-color:  #591674;
     border-color: #591674;
+    border-radius: 5px;
     border-style: solid;
     color: #EEEEEE;
 }
 
 button:hover {
-    opacity: 80%;
+    background-color: #AADD01;
+    border-color: #AADD01;
+}
+
+#numberArticle {
+    padding-top: 10px;
+}
+
+#myBtn {
+    position: fixed;
+    bottom: -5px;
+    right: 30px;
+    padding: 20px 20px;
+}
+
+#myBtn > a {
+    text-decoration: none;
+    color: #EEEEEE;
 }
