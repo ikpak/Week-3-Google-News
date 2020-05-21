@@ -11,6 +11,41 @@ const loadNews = async() => {
     let result = await data.json();
     newsList = result.articles
     render(newsList)
+    showSourceList()
+}
+
+// 1. Search by keyword
+// 2. assign that value into keyword variable
+const searchByKeyword = () => {
+    category = document.getElementById("keywordArea").value
+    loadNews()
+}
+
+const showSourceList = () => {
+    // get all the source names from articles
+    let sourceArray = newsList.map(item => item.source.name)
+    let sourceObject = {}
+    for(let i = 0; i < sourceArray.length; i++) {
+        let sourceName = sourceArray[i] // bring each source name from the array
+        if(sourceObject[sourceName] == null) {
+            sourceObject[sourceName] = 1
+        } else {
+            sourceObject[sourceName]++
+        }
+    }
+    let sourceList = Object.keys(sourceObject)
+    let html = sourceList.map(item => `<div class="column"><input id="sourceItem" type="checkbox" value="${item}" onchange="searchBySource(event)" />${item}: ${sourceObject[item]}</div>`).join(' ')
+    document.getElementById("sourceArea").innerHTML = html
+}
+
+let searchBySource = (event) => {
+    if(event.target.checked == true) {
+        sourceName = event.target.value
+        let filteredList = newsList.filter(item => item.source.name === sourceName)
+        render(filteredList)
+    } else {
+        render(newsList)
+    }
 }
 
 const render = (list) => {
@@ -68,3 +103,4 @@ const showMore = async() => {
     pageSize = pageSize + 20
     loadNews()
 }
+

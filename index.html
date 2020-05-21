@@ -58,7 +58,14 @@
 
     <section>
         <div class="container">
-            <div id="numberArticle"></div>
+            <div class="row">
+                <div class="column col-md-6" id="numberArticle"></div>
+                <div class="container column col-md-6 keyword-container">
+                    <input type="text" id="keywordArea" placeholder="Enter your keyword" />
+                    <button onclick="searchByKeyword()" id="searchBtn">Search</button>
+                </div>
+            </div>
+            <div id="sourceArea" class="row"></div>
             <div id="newsArea">
             </div>
         </div>
